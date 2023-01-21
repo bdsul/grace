@@ -5,18 +5,18 @@
 #include <type_traits>
 #include <climits>
 
-// Include interfaces
-#include "../interface/IEvolutionaryAlgorithm.hpp"
-#include "../interface/IPopulation.hpp"
-#include "../interface/IInitialiser.hpp"
-#include "../interface/IMapper.hpp"
-#include "../interface/IEvaluator.hpp"
-#include "../interface/ISelection.hpp"
-#include "../interface/ICrossover.hpp"
-#include "../interface/IMutation.hpp"
-#include "../interface/IReplacement.hpp"
-#include "../interface/ITermination.hpp"
-#include "../interface/IStatistics.hpp"
+// Include abstract classes
+#include "../abstract/EvolutionaryAlgorithm.hpp"
+#include "../abstract/Population.hpp"
+#include "../abstract/Initialiser.hpp"
+#include "../abstract/Mapper.hpp"
+#include "../abstract/Evaluator.hpp"
+#include "../abstract/Selection.hpp"
+#include "../abstract/Crossover.hpp"
+#include "../abstract/Mutation.hpp"
+#include "../abstract/Replacement.hpp"
+#include "../abstract/Termination.hpp"
+#include "../abstract/Statistics.hpp"
 
 // This template class implements a basic Genetic Algorithm with the following structure
 
@@ -44,7 +44,7 @@ template <class POPULATION,
           class REPLACEMENT,
           class TERMINATION,
           class STATISTICS>
-class GeneticAlgorithm : public IEvolutionaryAlgorithm
+class GeneticAlgorithm : public EvolutionaryAlgorithm
 {
 public:
     // Constructor/Destructor
@@ -63,16 +63,16 @@ public:
 
 public: // TODO: Should these be private and define access classes?
     // Check if operators are derived from the correct base classes
-    static_assert(std::is_base_of<IPopulation, POPULATION>());
-    static_assert(std::is_base_of<IInitialiser, INITIALISER>());
-    static_assert(std::is_base_of<IMapper, MAPPER>());
-    static_assert(std::is_base_of<IEvaluator, EVALUATOR>());
-    static_assert(std::is_base_of<ICrossover, CROSSOVER>());
-    static_assert(std::is_base_of<ISelection, SELECTION>());
-    static_assert(std::is_base_of<IMutation, MUTATION>());
-    static_assert(std::is_base_of<IReplacement, REPLACEMENT>());
-    static_assert(std::is_base_of<ITermination, TERMINATION>());
-    static_assert(std::is_base_of<IStatistics, STATISTICS>());
+    static_assert(std::is_base_of<Population, POPULATION>());
+    static_assert(std::is_base_of<Initialiser, INITIALISER>());
+    static_assert(std::is_base_of<Mapper, MAPPER>());
+    static_assert(std::is_base_of<Evaluator, EVALUATOR>());
+    static_assert(std::is_base_of<Crossover, CROSSOVER>());
+    static_assert(std::is_base_of<Selection, SELECTION>());
+    static_assert(std::is_base_of<Mutation, MUTATION>());
+    static_assert(std::is_base_of<Replacement, REPLACEMENT>());
+    static_assert(std::is_base_of<Termination, TERMINATION>());
+    static_assert(std::is_base_of<Statistics, STATISTICS>());
 
     // Single population of individuals
     POPULATION population;

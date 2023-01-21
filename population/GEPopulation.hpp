@@ -5,15 +5,15 @@
 #include <vector>
 #include <memory>
 
-// Include interfaces
-#include "../interface/IPopulation.hpp"
+// Include abstract classes
+#include "../abstract/Population.hpp"
 
 template <class GENOMETYPE>
-class GEPopulation : public IPopulation
+class GEPopulation : public Population
 {
 public:
-    GEPopulation(){};
-    virtual ~GEPopulation(){};
+    GEPopulation(){}; // Default constructor
+    virtual ~GEPopulation(){}; // Destructor
 
     // Define types to simplify expressions
     using GenomeType = GENOMETYPE;

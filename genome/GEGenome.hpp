@@ -5,14 +5,14 @@
 #include <vector>
 #include <string>
 
-// Include interface
-#include "../interface/IGenome.hpp"
+// Include abstract classes
+#include "../abstract/Genome.hpp"
 
-// Include composition classes
+// Include member classes
 #include "../grammar/CFGrammar.hpp"
 
 // This class implements...
-class GEGenome : public IGenome
+class GEGenome : public Genome
 {
 public:
     GEGenome() : phenotype(""), // Default Constructor - Initialise member variables
