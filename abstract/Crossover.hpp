@@ -7,21 +7,23 @@
 // Include abstract classes
 #include "Arguments.hpp"
 #include "Settings.hpp"
-#include "Random.hpp"
+#include "RNG.hpp"
 #include "Population.hpp"
 
 // Crossover abstract class
-class Crossover : public Arguments, public Settings, public Random
+template <class POPULATIONTYPE>
+class Crossover : public Arguments, public Settings, public RNG
 {
 public:
     // No constructor as class doesn't need initialisation
     virtual ~Crossover() = 0; // Declare as pure virtual to prevent instantiation
 
     // Define pure virtual methods that derived classes must implement
-    virtual bool crossover(Population &parents, Population &children) = 0;
+    virtual bool crossover(POPULATIONTYPE &parents, POPULATIONTYPE &children) = 0;
 };
 
 // Declare inline destructor to prevent linkage errors
-inline Crossover::~Crossover(){};
+template <class POPULATIONTYPE>
+inline Crossover<POPULATIONTYPE>::~Crossover(){};
 
 #endif

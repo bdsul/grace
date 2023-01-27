@@ -1,8 +1,10 @@
 set(ABSTRACT_HEADERS
     "Arguments.hpp"
     "Settings.hpp"
-    "Random.hpp"
+    "RNG.hpp"
     "Genome.hpp"
+    # "GEGenome.hpp"
+    # "NSGA2Genome.hpp"
     "Population.hpp"
     "Initialiser.hpp"
     "Mapper.hpp"

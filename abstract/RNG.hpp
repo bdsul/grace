@@ -1,22 +1,22 @@
-#ifndef _RANDOM_HPP_
-#define _RANDOM_HPP_
+#ifndef _RNG_HPP_
+#define _RNG_HPP_
 
 // Include system libraries
 #include <random>
 
 // Random Number Generator abstract class
-class Random
+class RNG
 {
 public:
-    Random(){ // Default Constructor
+    RNG(){ // Default Constructor
         rng.seed(0);
     }
 
-    Random(Random &copy){
+    RNG(RNG &copy){
         this->rng = copy.rng;
     }
 
-    virtual ~Random() = 0;  // Declare as pure virtual to prevent instantiation
+    virtual ~RNG() = 0;  // Declare as pure virtual to prevent instantiation
 
     virtual void setRNGSeed(unsigned int seed){
         rng.seed(seed);
@@ -25,6 +25,6 @@ public:
     std::minstd_rand rng;
 };
 
-inline Random::~Random(){};
+inline RNG::~RNG(){};
 
 #endif

@@ -1,5 +1,5 @@
-#ifndef _IEVOLUTIONARYALGORITHM_HPP_
-#define _IEVOLUTIONARYALGORITHM_HPP_
+#ifndef _EVOLUTIONARYALGORITHM_HPP_
+#define _EVOLUTIONARYALGORITHM_HPP_
 
 // Include system libraries
 #include <memory>
@@ -7,10 +7,10 @@
 // Include abstract classes
 #include "Arguments.hpp"
 #include "Settings.hpp"
-#include "Random.hpp"
+#include "RNG.hpp"
 
 // Evolutionary Algorithm abstract class
-class EvolutionaryAlgorithm : public Arguments, public Settings, public Random
+class EvolutionaryAlgorithm : public Arguments, public Settings, public RNG
 {
 public:
     // No constructor as class doesn't need initialisation
