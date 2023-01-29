@@ -23,12 +23,19 @@
 
 // Genomes
 #include "./genome/GEGenome.hpp"
+#include "./genome/FloatGenome.hpp"
+
+// Populations
+#include "./population/FloatPopulation.hpp"
 
 // Operator classes
 #include "./operators/crossover/GECrossover.hpp"
 #include "./operators/initialiser/GEInitialiser.hpp"
 #include "./operators/mapper/GEMapper.hpp"
 #include "./operators/mutation/GEMutation.hpp"
+#include "./operators/replacement/FloatReplacement.hpp"
+#include "./operators/selection/FloatSelection.hpp"
+#include "./operators/statistics/FloatStatistics.hpp"
 #include "./operators/termination/GETermination.hpp"
 
 // Utility classes
