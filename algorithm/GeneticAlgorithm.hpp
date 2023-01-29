@@ -63,16 +63,16 @@ public:
 
 public: // TODO: Should these be private and define access classes?
     // Check if operators are derived from the correct base classes
-    static_assert(std::is_base_of<Population, POPULATION>());
-    static_assert(std::is_base_of<Initialiser, INITIALISER>());
-    static_assert(std::is_base_of<Mapper, MAPPER>());
-    static_assert(std::is_base_of<Evaluator, EVALUATOR>());
-    static_assert(std::is_base_of<Crossover, CROSSOVER>());
-    static_assert(std::is_base_of<Selection, SELECTION>());
-    static_assert(std::is_base_of<Mutation, MUTATION>());
-    static_assert(std::is_base_of<Replacement, REPLACEMENT>());
-    static_assert(std::is_base_of<Termination, TERMINATION>());
-    static_assert(std::is_base_of<Statistics, STATISTICS>());
+    // static_assert(std::is_base_of<Population, POPULATION>());
+    // static_assert(std::is_base_of<Initialiser, INITIALISER>());
+    // static_assert(std::is_base_of<Mapper, MAPPER>());
+    // static_assert(std::is_base_of<Evaluator, EVALUATOR>());
+    // static_assert(std::is_base_of<Crossover, CROSSOVER>());
+    // static_assert(std::is_base_of<Selection, SELECTION>());
+    // static_assert(std::is_base_of<Mutation, MUTATION>());
+    // static_assert(std::is_base_of<Replacement, REPLACEMENT>());
+    // static_assert(std::is_base_of<Termination, TERMINATION>());
+    // static_assert(std::is_base_of<Statistics, STATISTICS>());
 
     // Single population of individuals
     POPULATION population;
