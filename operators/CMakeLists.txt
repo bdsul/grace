@@ -1,0 +1,8 @@
+add_subdirectory(initialiser)
+add_subdirectory(mapper)
+add_subdirectory(selection)
+add_subdirectory(crossover)
+add_subdirectory(mutation)
+add_subdirectory(replacement)
+add_subdirectory(termination)
+add_subdirectory(statistics)
