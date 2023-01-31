@@ -33,6 +33,7 @@ protected:
 
     // Variable
     bool replacementEnabled;
+    bool isMinimizationProblem;
 
 private:
     // Method pointer is private so that the prototype can be changed in the derived class
@@ -69,6 +70,26 @@ void FloatSelection<POPULATIONTYPE>::parseSettings(INIReader &settings)
         {
             std::cout << "Error: Invalid FloatSelection method name. Exiting..." << std::endl;
             exit(1);
+        }
+    }
+
+    // Get maximization/minimization problem
+    if (settings.HasValue("FloatSelection", "ProblemType"))
+    {
+        std::string problemType = settings.Get("FloatSelection", "ProblemType", "UNKNOWN");
+
+        if (problemType == "Maximization")
+        {
+            this->isMinimizationProblem = false;
+        }
+        else if (problemType == "Minimization")
+        {
+            this->isMinimizationProblem = true;
+        }
+        else
+        {
+            std::cout << "Error: Invalid FloatSelection problem type. Exiting..." << std::endl;
+            exit(EXIT_FAILURE);
         }
     }
 
@@ -121,40 +142,65 @@ bool FloatSelection<POPULATIONTYPE>::rouletteWheelSelection(POPULATIONTYPE &popu
         }
     }
 
-    // Get sum of scores
+    // Get sum of individuals
     double sumOfScores = 0;
     for (std::shared_ptr<GenomeType> individual : candidates.individuals)
     {
         sumOfScores += individual->score;
     }
 
-    // Create a distribution to choose a random number in range
-    std::uniform_real_distribution<> choice(0, sumOfScores);
+    // Get the normalised probabilities of each individual being chosen
+    std::vector<float> candidateProbabilities;
+    for (std::shared_ptr<GenomeType> individual : candidates.individuals)
+    {
+        float probability = 0.0;
+
+        // Check the problem type
+        if (isMinimizationProblem)
+        {
+            // Subtract normal probability from 1, and divide by number of individuals minus 1 to normalise again
+            probability = (1.0 - (individual->score / sumOfScores)) / (candidates.individuals.size() - 1);
+        }
+        else
+        {
+            // Normal probability, also used in the formula above
+            probability = individual->score / sumOfScores;
+        }
+
+        // Add calculated probability to probabilities vector
+        candidateProbabilities.push_back(probability);
+    }
+
+    // Scores will be normalised before selection
+    std::uniform_real_distribution<> choice(0.0, 1.0);
 
     // Repeat until we've chosen enough parents
     while (parents.individuals.size() < population.individuals.size())
     {
-        // Select a number in the range of 0 to sumOfScores
+        // Select a number in the range of 0 to 1
         double selection = choice(this->rng);
 
         // Find the corresponding individual
-        double tempSum = 0;
+        double currentSumOfProbabilities = 0;
         typename Individuals::iterator individualIt = candidates.individuals.begin();
+        std::vector<float>::iterator probabilityIt = candidateProbabilities.begin();
 
         // Select the individual
-        while (tempSum <= selection)
+        while (currentSumOfProbabilities <= selection)
         {
-            // Add score
-            tempSum += individualIt->get()->score;
+            // Add the current individual's probabilty to the current sum
+            currentSumOfProbabilities += *probabilityIt;
 
-            // Does the selected number lie in the current individual?
-            if (tempSum >= selection)
+            // Check if the sum exceeds the chosen random number
+            // If so, individualIt points to the chosen individual
+            if (currentSumOfProbabilities >= selection)
             {
                 break;
             }
             else
             {
                 ++individualIt;
+                ++probabilityIt;
             }
         }
 
@@ -164,7 +210,17 @@ bool FloatSelection<POPULATIONTYPE>::rouletteWheelSelection(POPULATIONTYPE &popu
         // If replacement is disabled, remove the individual from the candidates
         if (!replacementEnabled)
         {
+            // Erase the individual
             candidates.individuals.erase(individualIt);
+
+            // Normalise the other probabilites so we can remove the current individual
+            for (auto probability : candidateProbabilities)
+            {
+                probability = probability / (1.0 - *probabilityIt);
+            }
+
+            // Erase the current individual's probability
+            candidateProbabilities.erase(probabilityIt);
         }
     }
 

@@ -31,6 +31,7 @@ protected:
 
     // Variables
     float elitismRate;
+    bool isMinimizationProblem;
 
 private:
     // Method pointer is private so that the prototype can be changed in the derived class
@@ -38,13 +39,18 @@ private:
     // TODO: Template this so that the definition can change correctly.
     typedef bool (FloatReplacement::*ReplacementMethod)(POPULATIONTYPE &population, POPULATIONTYPE &children);
     ReplacementMethod method;
+
+    // Methods for sorting individuals
+    static bool sortIndividualMax(const GenomePointer &a, const GenomePointer &b);
+    static bool sortIndividualMin(const GenomePointer &a, const GenomePointer &b);
 };
 
 // Default constructor
 template <class POPULATIONTYPE>
 FloatReplacement<POPULATIONTYPE>::FloatReplacement()
     : method(&FloatReplacement::generational),
-      elitismRate(0.1){};
+      elitismRate(0.1),
+      isMinimizationProblem(false){};
 
 // Destructor
 template <class POPULATIONTYPE>
@@ -70,6 +76,25 @@ void FloatReplacement<POPULATIONTYPE>::parseSettings(INIReader &settings)
         }
     }
 
+    // Get maximization/minimization problem
+    if (settings.HasValue("FloatReplacement", "ProblemType"))
+    {
+        std::string problemType = settings.Get("FloatReplacement", "ProblemType", "UNKNOWN");
+
+        if (problemType == "Maximization")
+        {
+            this->isMinimizationProblem = false;
+        }
+        else if (problemType == "Minimization")
+        {
+            this->isMinimizationProblem = true;
+        }
+        else
+        {
+            std::cout << "Error: Invalid FloatReplacement problem type. Exiting..." << std::endl;
+            exit(EXIT_FAILURE);
+        }
+    }
     // Get elitism rate
     if (settings.HasValue("FloatReplacement", "ElitismRate"))
     {
@@ -97,13 +122,20 @@ bool FloatReplacement<POPULATIONTYPE>::replace(POPULATIONTYPE &population, POPUL
 template <class POPULATIONTYPE>
 bool FloatReplacement<POPULATIONTYPE>::generational(POPULATIONTYPE &population, POPULATIONTYPE &children)
 {
+    // Used to store the next population
     POPULATIONTYPE newPopulation;
 
-    // Sort both populations, Max score first
-    std::sort(std::begin(population.individuals), std::end(population.individuals), [](std::shared_ptr<GenomeType> a, std::shared_ptr<GenomeType> b)
-              { return a->score > b->score; });
-    std::sort(std::begin(children.individuals), std::end(children.individuals), [](std::shared_ptr<GenomeType> a, std::shared_ptr<GenomeType> b)
-              { return a->score > b->score; });
+    // Sort populations depending on problem type
+    if (isMinimizationProblem)
+    {
+        std::sort(std::begin(population.individuals), std::end(population.individuals), sortIndividualMin);
+        std::sort(std::begin(children.individuals), std::end(children.individuals), sortIndividualMin);
+    }
+    else
+    {
+        std::sort(std::begin(population.individuals), std::end(population.individuals), sortIndividualMax);
+        std::sort(std::begin(children.individuals), std::end(children.individuals), sortIndividualMax);
+    }
 
     // Make sure our new population is the correct size
     newPopulation.individuals.resize(population.individuals.size());
@@ -127,6 +159,18 @@ bool FloatReplacement<POPULATIONTYPE>::generational(POPULATIONTYPE &population, 
     population = newPopulation;
 
     return true;
+}
+
+template <class POPULATIONTYPE>
+bool FloatReplacement<POPULATIONTYPE>::sortIndividualMax(const GenomePointer &a, const GenomePointer &b)
+{
+    return a->score > b->score;
+}
+
+template <class POPULATIONTYPE>
+bool FloatReplacement<POPULATIONTYPE>::sortIndividualMin(const GenomePointer &a, const GenomePointer &b)
+{
+    return a->score < b->score;
 }
 
 #endif
