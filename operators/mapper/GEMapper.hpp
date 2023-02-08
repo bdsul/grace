@@ -167,10 +167,9 @@ bool GEMapper<POPULATIONTYPE>::addChildrenNodes(DerivationTree &currentNode, Gen
             ++currentWrappingEvents;
         }
         else{
-            // TODO: This doesn't need to be a exit of the program.
-            //       This can be handled by making the phenotype invalid.
-            std::cout << "Error: Ran out of codons! Exiting..." << std::endl;
-            exit(EXIT_FAILURE);
+            // Let the user know that we ran out of codons. This can indicate a badly designed grammar
+            std::cout << "Warning: Ran out of codons! Setting individual to invalid..." << std::endl;
+            genome.isPhenotypeValid = false;
         }
 
     }
