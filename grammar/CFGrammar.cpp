@@ -154,29 +154,43 @@ bool CFGrammar ::readBNFString(const char *stream)
                 {
                 case '\'':
                     currentChar = '\''; // Single quote
+                    break;
                 case '\"':
                     currentChar = '\"'; // Double quotes
+                    break;
                 case '\\':
                     currentChar = '\\'; // Backslash
+                    break;
+                case '0':
                     currentChar = '\0'; // Null character
+                    break;
                 case 'a':
                     currentChar = '\a'; // Audible bell
+                    break;
                 case 'b':
                     currentChar = '\b'; // Backspace
+                    break;
                 case 'f':
                     currentChar = '\f'; // Form-feed
+                    break;
                 case 'n':
                     currentChar = '\n'; // Newline
+                    break;
                 case 'r':
                     currentChar = '\r'; // Carriage return
+                    break;
                 case 't':
                     currentChar = '\t'; // Horizontal tab
+                    break;
                 case 'v':
                     currentChar = '\v'; // Vertical tab
+                    break;
                 case '\n':
                     skip = true; // Escaped newline
+                    break;
                 case '\r':
                     skip = true; // Escaped DOS return
+                    break;
                 default:
                     currentChar = stream[ii]; // TODO: Should this give a warning?
                 }
