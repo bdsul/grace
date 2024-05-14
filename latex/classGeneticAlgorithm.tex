@@ -1,0 +1,84 @@
+\hypertarget{classGeneticAlgorithm}{}\doxysection{Genetic\+Algorithm$<$ POPULATION, INITIALISER, MAPPER, EVALUATOR, SELECTION, CROSSOVER, MUTATION, REPLACEMENT, TERMINATION, STATISTICS $>$ Class Template Reference}
+\label{classGeneticAlgorithm}\index{GeneticAlgorithm$<$ POPULATION, INITIALISER, MAPPER, EVALUATOR, SELECTION, CROSSOVER, MUTATION, REPLACEMENT, TERMINATION, STATISTICS $>$@{GeneticAlgorithm$<$ POPULATION, INITIALISER, MAPPER, EVALUATOR, SELECTION, CROSSOVER, MUTATION, REPLACEMENT, TERMINATION, STATISTICS $>$}}
+
+
+Inheritance diagram for Genetic\+Algorithm$<$ POPULATION, INITIALISER, MAPPER, EVALUATOR, SELECTION, CROSSOVER, MUTATION, REPLACEMENT, TERMINATION, STATISTICS $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classGeneticAlgorithm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Genetic\+Algorithm$<$ POPULATION, INITIALISER, MAPPER, EVALUATOR, SELECTION, CROSSOVER, MUTATION, REPLACEMENT, TERMINATION, STATISTICS $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classGeneticAlgorithm__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_a413bc405e6ba5847e2636f8db47c8035}\label{classGeneticAlgorithm_a413bc405e6ba5847e2636f8db47c8035}} 
+{\bfseries Genetic\+Algorithm} (int argc, char $\ast$$\ast$argv, std\+::string settings\+File)
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_ac4ff1c3398ffb47aa8bc21a3f98dbaae}\label{classGeneticAlgorithm_ac4ff1c3398ffb47aa8bc21a3f98dbaae}} 
+void {\bfseries add\+Arguments} (cxxopts\+::\+Options \&)
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_a99b2543d2cad9a51250ccc8f7b881fce}\label{classGeneticAlgorithm_a99b2543d2cad9a51250ccc8f7b881fce}} 
+void {\bfseries parse\+Arguments} (cxxopts\+::\+Parse\+Result \&)
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_a9b944a169829435609db29ce0f31089b}\label{classGeneticAlgorithm_a9b944a169829435609db29ce0f31089b}} 
+void {\bfseries parse\+Settings} (INIReader \&)
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_a991220c65017cd6ed8a81d1e8a280d70}\label{classGeneticAlgorithm_a991220c65017cd6ed8a81d1e8a280d70}} 
+void {\bfseries initialise} ()
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_ad56eb14c2811f277f6ba777e361c8f1e}\label{classGeneticAlgorithm_ad56eb14c2811f277f6ba777e361c8f1e}} 
+void {\bfseries step} ()
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_ac9f8904cfcf966e3a7c1ba9945c0635b}\label{classGeneticAlgorithm_ac9f8904cfcf966e3a7c1ba9945c0635b}} 
+void {\bfseries evolve} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_afee734269a688b285cced6b8a0060d88}\label{classGeneticAlgorithm_afee734269a688b285cced6b8a0060d88}} 
+POPULATION {\bfseries population}
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_ace119e024a242e5692f53853129e2e8c}\label{classGeneticAlgorithm_ace119e024a242e5692f53853129e2e8c}} 
+INITIALISER {\bfseries initialiser}
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_af371d8e46ccee43955ebf14626d6f0b9}\label{classGeneticAlgorithm_af371d8e46ccee43955ebf14626d6f0b9}} 
+MAPPER {\bfseries mapper}
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_a20614cb1ecf7c1b4701bf99bc75eca8f}\label{classGeneticAlgorithm_a20614cb1ecf7c1b4701bf99bc75eca8f}} 
+EVALUATOR {\bfseries evaluator}
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_a6f881108f3142e2c77ae8463f55a0a23}\label{classGeneticAlgorithm_a6f881108f3142e2c77ae8463f55a0a23}} 
+SELECTION {\bfseries selection}
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_ae4b250049fb1bb3db855d47e536cd485}\label{classGeneticAlgorithm_ae4b250049fb1bb3db855d47e536cd485}} 
+CROSSOVER {\bfseries crossover}
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_a3c50193540b9c767950127ca9fe366d6}\label{classGeneticAlgorithm_a3c50193540b9c767950127ca9fe366d6}} 
+MUTATION {\bfseries mutation}
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_a733895952b1680660c0e9fdcba1b768e}\label{classGeneticAlgorithm_a733895952b1680660c0e9fdcba1b768e}} 
+REPLACEMENT {\bfseries replacement}
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_ad4e3244a5406e488ea35013167912d04}\label{classGeneticAlgorithm_ad4e3244a5406e488ea35013167912d04}} 
+TERMINATION {\bfseries termination}
+\item 
+\mbox{\Hypertarget{classGeneticAlgorithm_a708812e73277e950c0713d1e6fb20ec0}\label{classGeneticAlgorithm_a708812e73277e950c0713d1e6fb20ec0}} 
+STATISTICS {\bfseries statistics}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+algorithm/Genetic\+Algorithm.\+hpp\end{DoxyCompactItemize}

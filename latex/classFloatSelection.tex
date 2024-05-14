@@ -1,0 +1,64 @@
+\hypertarget{classFloatSelection}{}\doxysection{Float\+Selection$<$ POPULATIONTYPE $>$ Class Template Reference}
+\label{classFloatSelection}\index{FloatSelection$<$ POPULATIONTYPE $>$@{FloatSelection$<$ POPULATIONTYPE $>$}}
+
+
+Inheritance diagram for Float\+Selection$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classFloatSelection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Float\+Selection$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classFloatSelection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatSelection_ae18605a7ca53c9054d9988b1993dcaab}\label{classFloatSelection_ae18605a7ca53c9054d9988b1993dcaab}} 
+using {\bfseries Genome\+Type} = typename POPULATIONTYPE\+::\+Genome\+Type
+\item 
+\mbox{\Hypertarget{classFloatSelection_af72320e324941a2d198f27dc2cb73924}\label{classFloatSelection_af72320e324941a2d198f27dc2cb73924}} 
+using {\bfseries Genome\+Pointer} = typename POPULATIONTYPE\+::\+Genome\+Pointer
+\item 
+\mbox{\Hypertarget{classFloatSelection_a529afb173b21b609507a4c5570c11c64}\label{classFloatSelection_a529afb173b21b609507a4c5570c11c64}} 
+using {\bfseries Individuals} = typename POPULATIONTYPE\+::\+Individuals
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatSelection_a91a5c0492c3eae125ea752f1d08864bf}\label{classFloatSelection_a91a5c0492c3eae125ea752f1d08864bf}} 
+void {\bfseries parse\+Settings} (INIReader \&) override
+\item 
+\mbox{\Hypertarget{classFloatSelection_aa52d46285b21db77d1c1d955ff1c0f35}\label{classFloatSelection_aa52d46285b21db77d1c1d955ff1c0f35}} 
+bool {\bfseries select} (POPULATIONTYPE \&population, POPULATIONTYPE \&parents) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatSelection_ad5fcb9a952769d89d56f7fa696401871}\label{classFloatSelection_ad5fcb9a952769d89d56f7fa696401871}} 
+bool {\bfseries roulette\+Wheel\+Selection} (POPULATIONTYPE \&population, POPULATIONTYPE \&parents)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatSelection_a60f55a9008264978ca2f82e93bf450ea}\label{classFloatSelection_a60f55a9008264978ca2f82e93bf450ea}} 
+bool {\bfseries replacement\+Enabled}
+\item 
+\mbox{\Hypertarget{classFloatSelection_a91fa6b62ffd341f0ac02c0b639f95354}\label{classFloatSelection_a91fa6b62ffd341f0ac02c0b639f95354}} 
+bool {\bfseries is\+Minimization\+Problem}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+operators/selection/Float\+Selection.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{classGETermination}{}\doxysection{GETermination$<$ POPULATIONTYPE $>$ Class Template Reference}
+\label{classGETermination}\index{GETermination$<$ POPULATIONTYPE $>$@{GETermination$<$ POPULATIONTYPE $>$}}
+
+
+Inheritance diagram for GETermination$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{classGETermination__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GETermination$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{classGETermination__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGETermination_a9d925dec5defc3928933dcafb548fa1f}\label{classGETermination_a9d925dec5defc3928933dcafb548fa1f}} 
+using {\bfseries Genome\+Type} = typename POPULATIONTYPE\+::\+Genome\+Type
+\item 
+\mbox{\Hypertarget{classGETermination_a54d18e79c514bc295d43f7eb7ddf17f1}\label{classGETermination_a54d18e79c514bc295d43f7eb7ddf17f1}} 
+using {\bfseries Genome\+Pointer} = typename POPULATIONTYPE\+::\+Genome\+Pointer
+\item 
+\mbox{\Hypertarget{classGETermination_aad328bebf9b1652ea53676cbf7de67a8}\label{classGETermination_aad328bebf9b1652ea53676cbf7de67a8}} 
+using {\bfseries Individuals} = typename POPULATIONTYPE\+::\+Individuals
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGETermination_ac190d16e961a481bb645681d3c5a582a}\label{classGETermination_ac190d16e961a481bb645681d3c5a582a}} 
+void {\bfseries add\+Arguments} (cxxopts\+::\+Options \&) override
+\item 
+\mbox{\Hypertarget{classGETermination_a20175b0138fa039b64f000b75916d49c}\label{classGETermination_a20175b0138fa039b64f000b75916d49c}} 
+void {\bfseries parse\+Arguments} (cxxopts\+::\+Parse\+Result \&) override
+\item 
+\mbox{\Hypertarget{classGETermination_adc1535639675b8cda994907a2af1dd50}\label{classGETermination_adc1535639675b8cda994907a2af1dd50}} 
+void {\bfseries parse\+Settings} (INIReader \&) override
+\item 
+\mbox{\Hypertarget{classGETermination_a4c67b77673af1fea6889a6d8e018ea36}\label{classGETermination_a4c67b77673af1fea6889a6d8e018ea36}} 
+bool {\bfseries terminate} (POPULATIONTYPE \&population) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGETermination_a48cd7ecf0e39c8d50b099f27879f6446}\label{classGETermination_a48cd7ecf0e39c8d50b099f27879f6446}} 
+bool {\bfseries max\+Generation\+Termination} (POPULATIONTYPE \&population)
+\item 
+\mbox{\Hypertarget{classGETermination_aec990250eecaafe04de71f94392224b0}\label{classGETermination_aec990250eecaafe04de71f94392224b0}} 
+bool {\bfseries is\+Max\+Generations} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGETermination_a74fb6be2c39b28a3cde7c087d315e01e}\label{classGETermination_a74fb6be2c39b28a3cde7c087d315e01e}} 
+unsigned int {\bfseries max\+Generations}
+\item 
+\mbox{\Hypertarget{classGETermination_a218a267bf4d67d7f97a811dc5cb55f77}\label{classGETermination_a218a267bf4d67d7f97a811dc5cb55f77}} 
+unsigned int {\bfseries current\+Generation}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+operators/termination/GETermination.\+hpp\end{DoxyCompactItemize}

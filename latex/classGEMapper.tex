@@ -1,0 +1,70 @@
+\hypertarget{classGEMapper}{}\doxysection{GEMapper$<$ POPULATIONTYPE $>$ Class Template Reference}
+\label{classGEMapper}\index{GEMapper$<$ POPULATIONTYPE $>$@{GEMapper$<$ POPULATIONTYPE $>$}}
+
+
+Inheritance diagram for GEMapper$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{classGEMapper__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GEMapper$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{classGEMapper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGEMapper_ae3492abb5a6e15a98e254a647b417c94}\label{classGEMapper_ae3492abb5a6e15a98e254a647b417c94}} 
+using {\bfseries Genome\+Type} = typename POPULATIONTYPE\+::\+Genome\+Type
+\item 
+\mbox{\Hypertarget{classGEMapper_aaa56e878d11370515565e427346d843f}\label{classGEMapper_aaa56e878d11370515565e427346d843f}} 
+using {\bfseries Genome\+Pointer} = typename POPULATIONTYPE\+::\+Genome\+Pointer
+\item 
+\mbox{\Hypertarget{classGEMapper_afd2665f63f5a6cfc60b1170d8558a720}\label{classGEMapper_afd2665f63f5a6cfc60b1170d8558a720}} 
+using {\bfseries Individuals} = typename POPULATIONTYPE\+::\+Individuals
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGEMapper_aac4d9672b4c007fbaa5526eba0f5db0a}\label{classGEMapper_aac4d9672b4c007fbaa5526eba0f5db0a}} 
+void {\bfseries add\+Arguments} (cxxopts\+::\+Options \&) override
+\item 
+\mbox{\Hypertarget{classGEMapper_ad6ed96483e80e5a71a6bf5374e26c24e}\label{classGEMapper_ad6ed96483e80e5a71a6bf5374e26c24e}} 
+void {\bfseries parse\+Arguments} (cxxopts\+::\+Parse\+Result \&) override
+\item 
+\mbox{\Hypertarget{classGEMapper_aa56fc21bf361100768324de3c3ce9043}\label{classGEMapper_aa56fc21bf361100768324de3c3ce9043}} 
+void {\bfseries parse\+Settings} (INIReader \&) override
+\item 
+\mbox{\Hypertarget{classGEMapper_ae356fc7563995d6bd6e6fc6d20e18270}\label{classGEMapper_ae356fc7563995d6bd6e6fc6d20e18270}} 
+bool {\bfseries map} (POPULATIONTYPE \&population)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGEMapper_a53b2e6584e9cc4d6ca2b72cce94e54d6}\label{classGEMapper_a53b2e6584e9cc4d6ca2b72cce94e54d6}} 
+bool {\bfseries mapper} (POPULATIONTYPE \&population)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGEMapper_abcfdfe2fbf75ef461b976afb697536f5}\label{classGEMapper_abcfdfe2fbf75ef461b976afb697536f5}} 
+int {\bfseries max\+Wrapping\+Events}
+\item 
+\mbox{\Hypertarget{classGEMapper_a9d0e9c2b1a17b8f489f19b6f16c9a41e}\label{classGEMapper_a9d0e9c2b1a17b8f489f19b6f16c9a41e}} 
+int {\bfseries current\+Wrapping\+Events}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+operators/mapper/GEMapper.\+hpp\end{DoxyCompactItemize}

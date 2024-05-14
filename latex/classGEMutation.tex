@@ -1,0 +1,67 @@
+\hypertarget{classGEMutation}{}\doxysection{GEMutation$<$ POPULATIONTYPE $>$ Class Template Reference}
+\label{classGEMutation}\index{GEMutation$<$ POPULATIONTYPE $>$@{GEMutation$<$ POPULATIONTYPE $>$}}
+
+
+Inheritance diagram for GEMutation$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classGEMutation__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GEMutation$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classGEMutation__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGEMutation_a98c7f6433b93c5245691c488fc2b092c}\label{classGEMutation_a98c7f6433b93c5245691c488fc2b092c}} 
+using {\bfseries Genome\+Type} = typename POPULATIONTYPE\+::\+Genome\+Type
+\item 
+\mbox{\Hypertarget{classGEMutation_ab120eac0d2a81b6aecd03b880b713573}\label{classGEMutation_ab120eac0d2a81b6aecd03b880b713573}} 
+using {\bfseries Genome\+Pointer} = typename POPULATIONTYPE\+::\+Genome\+Pointer
+\item 
+\mbox{\Hypertarget{classGEMutation_ac8ec6ca46e53c9736e0721c22316ea9c}\label{classGEMutation_ac8ec6ca46e53c9736e0721c22316ea9c}} 
+using {\bfseries Individuals} = typename POPULATIONTYPE\+::\+Individuals
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGEMutation_ae20158c353f22609680eba2cca3dcf03}\label{classGEMutation_ae20158c353f22609680eba2cca3dcf03}} 
+void {\bfseries add\+Arguments} (cxxopts\+::\+Options \&) override
+\item 
+\mbox{\Hypertarget{classGEMutation_abb5355e5599002d423121eb6d7eabc25}\label{classGEMutation_abb5355e5599002d423121eb6d7eabc25}} 
+void {\bfseries parse\+Arguments} (cxxopts\+::\+Parse\+Result \&) override
+\item 
+\mbox{\Hypertarget{classGEMutation_a49a196e5bc62df9136aacceadfb96832}\label{classGEMutation_a49a196e5bc62df9136aacceadfb96832}} 
+void {\bfseries parse\+Settings} (INIReader \&) override
+\item 
+\mbox{\Hypertarget{classGEMutation_a166f315da75d95714259c31dffbffd03}\label{classGEMutation_a166f315da75d95714259c31dffbffd03}} 
+bool {\bfseries mutate} (POPULATIONTYPE \&population)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGEMutation_af7af86b9e4f1cce05550f47e499d313f}\label{classGEMutation_af7af86b9e4f1cce05550f47e499d313f}} 
+bool {\bfseries codon} (POPULATIONTYPE \&population)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGEMutation_a6b347ded135991be1e7a66e3bacf405e}\label{classGEMutation_a6b347ded135991be1e7a66e3bacf405e}} 
+float {\bfseries rate}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+operators/mutation/GEMutation.\+hpp\end{DoxyCompactItemize}

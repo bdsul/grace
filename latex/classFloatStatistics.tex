@@ -1,0 +1,79 @@
+\hypertarget{classFloatStatistics}{}\doxysection{Float\+Statistics$<$ POPULATIONTYPE $>$ Class Template Reference}
+\label{classFloatStatistics}\index{FloatStatistics$<$ POPULATIONTYPE $>$@{FloatStatistics$<$ POPULATIONTYPE $>$}}
+
+
+Inheritance diagram for Float\+Statistics$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classFloatStatistics__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Float\+Statistics$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classFloatStatistics__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatStatistics_a23535e414c8fa3c22e69e27cf55f037a}\label{classFloatStatistics_a23535e414c8fa3c22e69e27cf55f037a}} 
+using {\bfseries Genome\+Type} = typename POPULATIONTYPE\+::\+Genome\+Type
+\item 
+\mbox{\Hypertarget{classFloatStatistics_af38ee02b7f7e572a2bc2100690eea2d6}\label{classFloatStatistics_af38ee02b7f7e572a2bc2100690eea2d6}} 
+using {\bfseries Genome\+Pointer} = typename POPULATIONTYPE\+::\+Genome\+Pointer
+\item 
+\mbox{\Hypertarget{classFloatStatistics_abe400d41f0b57c9e3ca37bf96a082c9a}\label{classFloatStatistics_abe400d41f0b57c9e3ca37bf96a082c9a}} 
+using {\bfseries Individuals} = typename POPULATIONTYPE\+::\+Individuals
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatStatistics_a82a836bab8fa61ec60bd7986a675ec51}\label{classFloatStatistics_a82a836bab8fa61ec60bd7986a675ec51}} 
+bool {\bfseries step} (POPULATIONTYPE \&population) override
+\item 
+\mbox{\Hypertarget{classFloatStatistics_abbb8f757ee1d020177fc88d033b3d4ac}\label{classFloatStatistics_abbb8f757ee1d020177fc88d033b3d4ac}} 
+bool {\bfseries end} (POPULATIONTYPE \&population) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatStatistics_a0ad56810515062722ad7d56101a46253}\label{classFloatStatistics_a0ad56810515062722ad7d56101a46253}} 
+bool {\bfseries float\+Step} (POPULATIONTYPE \&population)
+\item 
+\mbox{\Hypertarget{classFloatStatistics_a0d03a6b258265079f3b2e96be54200e9}\label{classFloatStatistics_a0d03a6b258265079f3b2e96be54200e9}} 
+bool {\bfseries float\+End} (POPULATIONTYPE \&population)
+\item 
+\mbox{\Hypertarget{classFloatStatistics_a9901d22efc19427a3dff4fff086c9027}\label{classFloatStatistics_a9901d22efc19427a3dff4fff086c9027}} 
+float {\bfseries get\+Mean} (POPULATIONTYPE \&population)
+\item 
+\mbox{\Hypertarget{classFloatStatistics_a9af48ea0ffcc92f57ed6495c99a0eaac}\label{classFloatStatistics_a9af48ea0ffcc92f57ed6495c99a0eaac}} 
+float {\bfseries get\+Max} (POPULATIONTYPE \&population)
+\item 
+\mbox{\Hypertarget{classFloatStatistics_a7d3c4d0e0113d73cf91f24890292d55e}\label{classFloatStatistics_a7d3c4d0e0113d73cf91f24890292d55e}} 
+float {\bfseries get\+Min} (POPULATIONTYPE \&population)
+\item 
+\mbox{\Hypertarget{classFloatStatistics_a2d0170f18c3b22a4c0f57f8b918a1cbe}\label{classFloatStatistics_a2d0170f18c3b22a4c0f57f8b918a1cbe}} 
+float {\bfseries get\+Standard\+Deviation} (POPULATIONTYPE \&population)
+\item 
+\mbox{\Hypertarget{classFloatStatistics_acb85bf0353dcf91e5658ae88f44340d4}\label{classFloatStatistics_acb85bf0353dcf91e5658ae88f44340d4}} 
+void {\bfseries print\+Best\+Individual} (POPULATIONTYPE \&population)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatStatistics_ad07ee4a103967a2cf0235eb38881abc0}\label{classFloatStatistics_ad07ee4a103967a2cf0235eb38881abc0}} 
+int {\bfseries current\+Generation}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+operators/statistics/Float\+Statistics.\+hpp\end{DoxyCompactItemize}

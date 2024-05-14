@@ -1,0 +1,93 @@
+\hypertarget{classGEInitialiser}{}\doxysection{GEInitialiser$<$ POPULATIONTYPE $>$ Class Template Reference}
+\label{classGEInitialiser}\index{GEInitialiser$<$ POPULATIONTYPE $>$@{GEInitialiser$<$ POPULATIONTYPE $>$}}
+
+
+Inheritance diagram for GEInitialiser$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGEInitialiser__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GEInitialiser$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGEInitialiser__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGEInitialiser_a03ff22c00e71c35ce733ea8a2cf66b1f}\label{classGEInitialiser_a03ff22c00e71c35ce733ea8a2cf66b1f}} 
+using {\bfseries Genome\+Type} = typename POPULATIONTYPE\+::\+Genome\+Type
+\item 
+\mbox{\Hypertarget{classGEInitialiser_a0d9d632b000a6e08bb09a30cf87896ac}\label{classGEInitialiser_a0d9d632b000a6e08bb09a30cf87896ac}} 
+using {\bfseries Genome\+Pointer} = typename POPULATIONTYPE\+::\+Genome\+Pointer
+\item 
+\mbox{\Hypertarget{classGEInitialiser_a2d86d3598973c301460e60e9749ae00e}\label{classGEInitialiser_a2d86d3598973c301460e60e9749ae00e}} 
+using {\bfseries Individuals} = typename POPULATIONTYPE\+::\+Individuals
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGEInitialiser_a2818d338ac92a5f80019942ca7e594b2}\label{classGEInitialiser_a2818d338ac92a5f80019942ca7e594b2}} 
+virtual void {\bfseries add\+Arguments} (cxxopts\+::\+Options \&)
+\item 
+\mbox{\Hypertarget{classGEInitialiser_ae98e804cfcbdff90c1693383ee0bd8ab}\label{classGEInitialiser_ae98e804cfcbdff90c1693383ee0bd8ab}} 
+virtual void {\bfseries parse\+Arguments} (cxxopts\+::\+Parse\+Result \&)
+\item 
+\mbox{\Hypertarget{classGEInitialiser_ae45b229f8a513cd7d33b03d1467eaaf9}\label{classGEInitialiser_ae45b229f8a513cd7d33b03d1467eaaf9}} 
+virtual void {\bfseries parse\+Settings} (INIReader \&)
+\item 
+\mbox{\Hypertarget{classGEInitialiser_aa838958ecfb2cb9984c490539741601b}\label{classGEInitialiser_aa838958ecfb2cb9984c490539741601b}} 
+virtual bool {\bfseries initialise} (POPULATIONTYPE \&population) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGEInitialiser_ac2c73a93e06e48ed06ff0d3237dae272}\label{classGEInitialiser_ac2c73a93e06e48ed06ff0d3237dae272}} 
+enum {\bfseries RHHTYPE} \{ {\bfseries GROW}
+, {\bfseries FULL}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGEInitialiser_ac21576181d4802b78458926db9cb9916}\label{classGEInitialiser_ac21576181d4802b78458926db9cb9916}} 
+bool {\bfseries random} (POPULATIONTYPE \&population)
+\item 
+\mbox{\Hypertarget{classGEInitialiser_a03076ea2da29a9c20bd2c8daefbee0ce}\label{classGEInitialiser_a03076ea2da29a9c20bd2c8daefbee0ce}} 
+bool {\bfseries rvd} (POPULATIONTYPE \&population)
+\item 
+\mbox{\Hypertarget{classGEInitialiser_a2e476624f6cfdb6a0a9795d2257a8ab7}\label{classGEInitialiser_a2e476624f6cfdb6a0a9795d2257a8ab7}} 
+bool {\bfseries sensible} (POPULATIONTYPE \&population)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGEInitialiser_a4aec302fb81c1db73ba1c99e5b2f3031}\label{classGEInitialiser_a4aec302fb81c1db73ba1c99e5b2f3031}} 
+unsigned int {\bfseries genome\+Min\+Length}
+\item 
+\mbox{\Hypertarget{classGEInitialiser_aea96a5515b0ad0b39c52e126dfe7dbf6}\label{classGEInitialiser_aea96a5515b0ad0b39c52e126dfe7dbf6}} 
+unsigned int {\bfseries genome\+Max\+Length}
+\item 
+\mbox{\Hypertarget{classGEInitialiser_a57f95e680df5dfd97275777cfc3c3a0e}\label{classGEInitialiser_a57f95e680df5dfd97275777cfc3c3a0e}} 
+unsigned int {\bfseries population\+Size}
+\item 
+\mbox{\Hypertarget{classGEInitialiser_ae37339c64c8800e9081c0244595b87b2}\label{classGEInitialiser_ae37339c64c8800e9081c0244595b87b2}} 
+unsigned int {\bfseries sensible\+Max\+Depth}
+\item 
+\mbox{\Hypertarget{classGEInitialiser_a7c73774dcc3dac5c57dc249e908f8f34}\label{classGEInitialiser_a7c73774dcc3dac5c57dc249e908f8f34}} 
+\mbox{\hyperlink{classCFGrammar}{CFGrammar}} {\bfseries grammar\+File}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+operators/initialiser/GEInitialiser.\+hpp\end{DoxyCompactItemize}
