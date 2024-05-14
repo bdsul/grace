@@ -1,0 +1,55 @@
+\hypertarget{classGrammar}{}\doxysection{Grammar$<$ RULES $>$ Class Template Reference}
+\label{classGrammar}\index{Grammar$<$ RULES $>$@{Grammar$<$ RULES $>$}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGrammar_a6a7cb9dc985f2b0bbc751a5cbc60b8cd}\label{classGrammar_a6a7cb9dc985f2b0bbc751a5cbc60b8cd}} 
+using {\bfseries Symbol\+Pointer} = std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classSymbol}{Symbol}} $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGrammar_afd659a3f9f9cab2ab9a93d54555a3384}\label{classGrammar_afd659a3f9f9cab2ab9a93d54555a3384}} 
+{\bfseries Grammar} (const \mbox{\hyperlink{classGrammar}{Grammar}} \&)
+\item 
+\mbox{\Hypertarget{classGrammar_ae7b84179c91cdc0b747f874d58434829}\label{classGrammar_ae7b84179c91cdc0b747f874d58434829}} 
+virtual bool {\bfseries read\+BNFFile} (const char $\ast$)=0
+\item 
+\mbox{\Hypertarget{classGrammar_a38f62cd11c95c031ab9d60b46b014794}\label{classGrammar_a38f62cd11c95c031ab9d60b46b014794}} 
+virtual bool {\bfseries read\+BNFFile} (const std\+::string \&)=0
+\item 
+\mbox{\Hypertarget{classGrammar_ae45d921db00ab5329546267e591d8bd9}\label{classGrammar_ae45d921db00ab5329546267e591d8bd9}} 
+virtual void {\bfseries output\+BNF} (std\+::ostream \&) const =0
+\item 
+\mbox{\Hypertarget{classGrammar_aaaa9c653eb778fd14aa07eeb71c4535f}\label{classGrammar_aaaa9c653eb778fd14aa07eeb71c4535f}} 
+virtual Symbol\+Pointer {\bfseries get\+Start\+Symbol} () const =0
+\item 
+\mbox{\Hypertarget{classGrammar_ac028fb30b3b9f00d54d1cc410d6bd481}\label{classGrammar_ac028fb30b3b9f00d54d1cc410d6bd481}} 
+virtual bool {\bfseries set\+Start\+Symbol} (const \mbox{\hyperlink{classSymbol}{Symbol}} \&)=0
+\item 
+\mbox{\Hypertarget{classGrammar_aedf079208e066f65a0bcdb8b3b7ad80c}\label{classGrammar_aedf079208e066f65a0bcdb8b3b7ad80c}} 
+void {\bfseries set\+Valid\+Grammar} (const bool)
+\item 
+\mbox{\Hypertarget{classGrammar_af971dfb060ba2bceed63193516a0a610}\label{classGrammar_af971dfb060ba2bceed63193516a0a610}} 
+bool {\bfseries get\+Valid\+Grammar} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGrammar_a8219aa079ec3bd87850756d8b3d54e6c}\label{classGrammar_a8219aa079ec3bd87850756d8b3d54e6c}} 
+RULES {\bfseries rules}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGrammar_a181858fd844cf90db197d7e7f9c190be}\label{classGrammar_a181858fd844cf90db197d7e7f9c190be}} 
+bool {\bfseries valid\+Grammar}
+\item 
+\mbox{\Hypertarget{classGrammar_aef670ca87dc35fdbb625e89407b3ff68}\label{classGrammar_aef670ca87dc35fdbb625e89407b3ff68}} 
+Symbol\+Pointer {\bfseries start\+Symbol}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+grammar/Grammar.\+hpp\end{DoxyCompactItemize}

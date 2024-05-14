@@ -1,0 +1,64 @@
+\hypertarget{classFloatReplacement}{}\doxysection{Float\+Replacement$<$ POPULATIONTYPE $>$ Class Template Reference}
+\label{classFloatReplacement}\index{FloatReplacement$<$ POPULATIONTYPE $>$@{FloatReplacement$<$ POPULATIONTYPE $>$}}
+
+
+Inheritance diagram for Float\+Replacement$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classFloatReplacement__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Float\+Replacement$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classFloatReplacement__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatReplacement_a4ef5ec7cdb34597c51404a9175a6fa27}\label{classFloatReplacement_a4ef5ec7cdb34597c51404a9175a6fa27}} 
+using {\bfseries Genome\+Type} = typename POPULATIONTYPE\+::\+Genome\+Type
+\item 
+\mbox{\Hypertarget{classFloatReplacement_a3da12acccde3d4cb5a930f3f28e09b5a}\label{classFloatReplacement_a3da12acccde3d4cb5a930f3f28e09b5a}} 
+using {\bfseries Genome\+Pointer} = typename POPULATIONTYPE\+::\+Genome\+Pointer
+\item 
+\mbox{\Hypertarget{classFloatReplacement_a3f8c50357608542ca22cfa73aac697c1}\label{classFloatReplacement_a3f8c50357608542ca22cfa73aac697c1}} 
+using {\bfseries Individuals} = typename POPULATIONTYPE\+::\+Individuals
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatReplacement_aa7e6ac7883fec3e7bf58779bf34f7f9b}\label{classFloatReplacement_aa7e6ac7883fec3e7bf58779bf34f7f9b}} 
+void {\bfseries parse\+Settings} (INIReader \&) override
+\item 
+\mbox{\Hypertarget{classFloatReplacement_aa7055f5454154f28ca4e657cc6f6b37c}\label{classFloatReplacement_aa7055f5454154f28ca4e657cc6f6b37c}} 
+bool {\bfseries replace} (POPULATIONTYPE \&population, POPULATIONTYPE \&children) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatReplacement_abdf3d1ffde661951193e9b14934631a8}\label{classFloatReplacement_abdf3d1ffde661951193e9b14934631a8}} 
+bool {\bfseries generational} (POPULATIONTYPE \&population, POPULATIONTYPE \&children)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFloatReplacement_af0e6d1e201c155342670227ff073993e}\label{classFloatReplacement_af0e6d1e201c155342670227ff073993e}} 
+float {\bfseries elitism\+Rate}
+\item 
+\mbox{\Hypertarget{classFloatReplacement_a4cfce76f18497a8d0cea4000cd7bd570}\label{classFloatReplacement_a4cfce76f18497a8d0cea4000cd7bd570}} 
+bool {\bfseries is\+Minimization\+Problem}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+operators/replacement/Float\+Replacement.\+hpp\end{DoxyCompactItemize}

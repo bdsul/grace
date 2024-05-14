@@ -1,0 +1,68 @@
+\hypertarget{classCFGrammar}{}\doxysection{CFGrammar Class Reference}
+\label{classCFGrammar}\index{CFGrammar@{CFGrammar}}
+
+
+Inheritance diagram for CFGrammar\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classCFGrammar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CFGrammar\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classCFGrammar__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCFGrammar_ac0320ad56b799cb49442cb99b5b2e126}\label{classCFGrammar_ac0320ad56b799cb49442cb99b5b2e126}} 
+{\bfseries CFGrammar} (const \mbox{\hyperlink{classCFGrammar}{CFGrammar}} \&)
+\item 
+\mbox{\Hypertarget{classCFGrammar_a47cd13a9ee2f8c4a8e4acb3945375444}\label{classCFGrammar_a47cd13a9ee2f8c4a8e4acb3945375444}} 
+bool {\bfseries read\+BNFFile} (const char $\ast$)
+\item 
+\mbox{\Hypertarget{classCFGrammar_ad8cee3efc85f7a9d9df2dc41793d7040}\label{classCFGrammar_ad8cee3efc85f7a9d9df2dc41793d7040}} 
+bool {\bfseries read\+BNFFile} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{classCFGrammar_a7379ae6fad68ed1a44dabb89cd41679f}\label{classCFGrammar_a7379ae6fad68ed1a44dabb89cd41679f}} 
+bool {\bfseries read\+BNFString} (const char $\ast$)
+\item 
+\mbox{\Hypertarget{classCFGrammar_a3a009666703f9a6ac917f3a45bb77fda}\label{classCFGrammar_a3a009666703f9a6ac917f3a45bb77fda}} 
+bool {\bfseries read\+BNFString} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{classCFGrammar_a406103009ae17033e1fe4cc18d6ca222}\label{classCFGrammar_a406103009ae17033e1fe4cc18d6ca222}} 
+bool {\bfseries add\+BNFString} (const char $\ast$)
+\item 
+\mbox{\Hypertarget{classCFGrammar_a77e855685e4a95c44eb33a7e62a09aae}\label{classCFGrammar_a77e855685e4a95c44eb33a7e62a09aae}} 
+bool {\bfseries add\+BNFString} (const std\+::string \&)
+\item 
+\mbox{\Hypertarget{classCFGrammar_a8ffe6aa4496391ef57a2a273b53ad820}\label{classCFGrammar_a8ffe6aa4496391ef57a2a273b53ad820}} 
+void {\bfseries output\+BNF} (std\+::ostream \&) const
+\item 
+\mbox{\Hypertarget{classCFGrammar_a06881cfb8f638afed085aea0cab47e01}\label{classCFGrammar_a06881cfb8f638afed085aea0cab47e01}} 
+\mbox{\hyperlink{classGrammar}{Grammar}}$<$ CFRules $>$\+::Symbol\+Pointer {\bfseries get\+Start\+Symbol} () const
+\item 
+\mbox{\Hypertarget{classCFGrammar_afab897cde6f63310a314b664e87ee410}\label{classCFGrammar_afab897cde6f63310a314b664e87ee410}} 
+bool {\bfseries set\+Start\+Symbol} (const \mbox{\hyperlink{classSymbol}{Symbol}} \&)
+\item 
+\mbox{\Hypertarget{classCFGrammar_ac9361b20f6217e8920cf9f915108d796}\label{classCFGrammar_ac9361b20f6217e8920cf9f915108d796}} 
+\mbox{\hyperlink{classCFRule}{CFRule}} $\ast$ {\bfseries get\+Start\+Rule} () const
+\item 
+\mbox{\Hypertarget{classCFGrammar_a8d1f78d7ba419623a73faba9a2e57c07}\label{classCFGrammar_a8d1f78d7ba419623a73faba9a2e57c07}} 
+\mbox{\hyperlink{classCFRule}{CFRule}} $\ast$ {\bfseries find\+Rule} (const \mbox{\hyperlink{classSymbol}{Symbol}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+grammar/CFGrammar.\+hpp\item 
+grammar/CFGrammar.\+cpp\end{DoxyCompactItemize}

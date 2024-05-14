@@ -1,0 +1,70 @@
+\hypertarget{classGECrossover}{}\doxysection{GECrossover$<$ POPULATIONTYPE $>$ Class Template Reference}
+\label{classGECrossover}\index{GECrossover$<$ POPULATIONTYPE $>$@{GECrossover$<$ POPULATIONTYPE $>$}}
+
+
+Inheritance diagram for GECrossover$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classGECrossover__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GECrossover$<$ POPULATIONTYPE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classGECrossover__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGECrossover_a5b35f1b6c1d33676f0a2518d5d2240ad}\label{classGECrossover_a5b35f1b6c1d33676f0a2518d5d2240ad}} 
+using {\bfseries Genome\+Type} = typename POPULATIONTYPE\+::\+Genome\+Type
+\item 
+\mbox{\Hypertarget{classGECrossover_a396bc0b4cf12402829cff113d7df0466}\label{classGECrossover_a396bc0b4cf12402829cff113d7df0466}} 
+using {\bfseries Genome\+Pointer} = typename POPULATIONTYPE\+::\+Genome\+Pointer
+\item 
+\mbox{\Hypertarget{classGECrossover_ae8e06dfe5a3b107772eb557744c5a2f7}\label{classGECrossover_ae8e06dfe5a3b107772eb557744c5a2f7}} 
+using {\bfseries Individuals} = typename POPULATIONTYPE\+::\+Individuals
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGECrossover_a3d58a1e40057858d680bb8fa16476f92}\label{classGECrossover_a3d58a1e40057858d680bb8fa16476f92}} 
+void {\bfseries add\+Arguments} (cxxopts\+::\+Options \&) override
+\item 
+\mbox{\Hypertarget{classGECrossover_a1c9662bb2bf2d99c7265bc70cf09db3f}\label{classGECrossover_a1c9662bb2bf2d99c7265bc70cf09db3f}} 
+void {\bfseries parse\+Arguments} (cxxopts\+::\+Parse\+Result \&) override
+\item 
+\mbox{\Hypertarget{classGECrossover_a1a9b53b432cf20d506367e9ae485cd7f}\label{classGECrossover_a1a9b53b432cf20d506367e9ae485cd7f}} 
+void {\bfseries parse\+Settings} (INIReader \&) override
+\item 
+\mbox{\Hypertarget{classGECrossover_acb8bb0756d7da0c100724601c0c22fa5}\label{classGECrossover_acb8bb0756d7da0c100724601c0c22fa5}} 
+bool {\bfseries crossover} (POPULATIONTYPE \&parents, POPULATIONTYPE \&children) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGECrossover_a4576895f8450f99b0b1e969212f89c73}\label{classGECrossover_a4576895f8450f99b0b1e969212f89c73}} 
+bool {\bfseries fixed\+One\+Point} (POPULATIONTYPE \&parents, POPULATIONTYPE \&children)
+\item 
+\mbox{\Hypertarget{classGECrossover_a76041a32cbaf72023364bd5d3e0c8a2f}\label{classGECrossover_a76041a32cbaf72023364bd5d3e0c8a2f}} 
+bool {\bfseries fixed\+One\+Point\+Genome} (const Genome\+Type \&mom, const Genome\+Type \&dad, Genome\+Type \&child1, Genome\+Type \&child2)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGECrossover_a938c36fbd5a663c64d8338bf47dfdfee}\label{classGECrossover_a938c36fbd5a663c64d8338bf47dfdfee}} 
+float {\bfseries rate}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+operators/crossover/GECrossover.\+hpp\end{DoxyCompactItemize}
